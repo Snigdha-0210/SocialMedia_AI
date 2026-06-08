@@ -14,13 +14,19 @@ if (!admin.apps.length) {
       });
     } else {
       console.warn('Firebase credentials missing during build. Initializing mock app.');
-      admin.initializeApp({ projectId: process.env.FIREBASE_PROJECT_ID || "demo-project" });
+      admin.initializeApp({ 
+        projectId: process.env.FIREBASE_PROJECT_ID || "demo-project",
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || "demo-project.appspot.com"
+      });
     }
   } catch (error) {
     console.error('Firebase admin initialization error:', error);
     // If it completely fails, initialize a completely empty app to prevent build crashes
     if (!admin.apps.length) {
-       admin.initializeApp({ projectId: "demo-project" });
+       admin.initializeApp({ 
+         projectId: "demo-project",
+         storageBucket: "demo-project.appspot.com"
+       });
     }
   }
 }
