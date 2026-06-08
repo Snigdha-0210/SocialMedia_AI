@@ -9,7 +9,7 @@ export async function GET() {
       .limit(20)
       .get();
       
-    const posts = [];
+    const posts: any[] = [];
     snapshot.forEach(doc => {
       posts.push({ id: doc.id, ...doc.data() });
     });
