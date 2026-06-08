@@ -2,6 +2,10 @@
 
 Creator OS is a premium SaaS platform designed for content creators to analyze global trends, discover high-growth content opportunities, and monitor competitor performance in real-time.
 
+## 🎥 Demo Video
+Watch the full pitch and demonstration of the Creator OS dashboard here: 
+**[View Demo Video on Google Drive](https://drive.google.com/file/d/1QnWxuYWFUWiYK2PlRmdEkm3k930g-FoZ/view?usp=sharing)**
+
 ## Features
 - **Global Trending Reels Table:** Analyze the top performing short-form content worldwide.
 - **Hottest Reels Grid:** Horizontal responsive cards with real-time virality scores and velocity metrics.
