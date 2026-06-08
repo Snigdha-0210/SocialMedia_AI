@@ -1,7 +1,7 @@
 "use client";
 
 import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+import TopNav from "../dashboard/TopNav";
 import GenerationOverlay from "./GenerationOverlay";
 import { usePathname, useRouter } from "next/navigation";
 import { useAppStore } from "@/store/useAppStore";
@@ -36,7 +36,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     <div className="app-shell">
       <Sidebar />
       <div className="main-content">
-        <Navbar />
+        <TopNav />
         <main className="page-content">{children}</main>
       </div>
       <GenerationOverlay />

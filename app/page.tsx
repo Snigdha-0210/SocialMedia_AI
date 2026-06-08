@@ -1,44 +1,41 @@
 "use client";
 
-import CommandCenter from "@/components/home/CommandCenter";
-import AnalyticsStrip from "@/components/home/AnalyticsStrip";
-import TrendingList from "@/components/home/TrendingList";
-import ModernTimeline from "@/components/home/ModernTimeline";
-import ActionTiles from "@/components/home/ActionTiles";
+import GlobalTrendingTable from "@/components/dashboard/GlobalTrendingTable";
+import HottestReelsGrid from "@/components/dashboard/HottestReelsGrid";
+import TrendingReelsList from "@/components/dashboard/TrendingReelsList";
+import GrowthPotentialList from "@/components/dashboard/GrowthPotentialList";
+import CategoryRankings from "@/components/dashboard/CategoryRankings";
+import CategoryHeatmap from "@/components/dashboard/CategoryHeatmap";
+import AIInsights from "@/components/dashboard/AIInsights";
 import ProfileOnboarding from "@/components/home/ProfileOnboarding";
-import GlobalTrendsTable from "@/components/home/GlobalTrendsTable";
-import GrowthPotentialList from "@/components/home/GrowthPotentialList";
 
 export default function HomePage() {
   return (
     <>
       <ProfileOnboarding />
-      <div className="flex flex-col gap-8 pb-24">
-      
-      {/* 1. Hero Section - Single Card */}
-      <CommandCenter />
 
-      {/* 2. Analytics Strip - Shared Horizontal Row */}
-      <AnalyticsStrip />
+      <div className="max-w-[1600px] mx-auto px-6 py-6 md:p-6 lg:p-8 flex flex-col gap-6 lg:gap-8 pb-24 bg-[#F8FAFC] min-h-screen font-sans">
 
-      {/* 3. Action Tiles - Moved up for quick access */}
-      <ActionTiles />
-
-      {/* 4. Two Column Layout - Trending List vs Timeline */}
-      <div className="flex flex-col lg:flex-row gap-8 items-stretch" style={{ minHeight: 480 }}>
-        <div className="flex-[0.6]">
-          <TrendingList />
+        {/* 1. Row 1: The Three Engines */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <TrendingReelsList />
+          <GrowthPotentialList />
+          <AIInsights />
         </div>
-        <div className="flex-[0.4]">
-          <ModernTimeline />
+
+        {/* 2. Global Top 20 Trending Reels Table */}
+        <GlobalTrendingTable />
+
+        {/* 3. Hottest Reels Right Now */}
+        <HottestReelsGrid />
+
+        {/* 4. Trending Categories */}
+        <CategoryRankings />
+
+        {/* 5. Bottom Section: Heatmap */}
+        <div className="grid grid-cols-1 gap-6">
+          <CategoryHeatmap />
         </div>
-      </div>
-
-      {/* 5. Highest Growth Potential */}
-      <GrowthPotentialList />
-
-      {/* 6. Global Top Trending Topics */}
-      <GlobalTrendsTable />
 
       </div>
     </>

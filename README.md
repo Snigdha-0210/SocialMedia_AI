@@ -1,36 +1,45 @@
-# Creator OS - Social Media AI Dashboard
+# Creator OS
 
-Creator OS is a Next.js-powered, AI-driven dashboard built for content creators and marketers to analyze trends, discover top creators, and optimize their social media strategy across YouTube, Instagram, and TikTok.
+Creator OS is a premium SaaS platform designed for content creators to analyze global trends, discover high-growth content opportunities, and monitor competitor performance in real-time.
 
 ## Features
+- **Global Trending Reels Table:** Analyze the top performing short-form content worldwide.
+- **Hottest Reels Grid:** Horizontal responsive cards with real-time virality scores and velocity metrics.
+- **Category Performance Dashboard:** Interactive sparkline charts for tracking the most popular content categories.
+- **AI Opportunity Insights:** Actionable insights predicting the next big trends using an AI-driven confidence score.
 
-- **Live Trend Discovery**: Real-time social media trends across multiple platforms.
-- **Top Creator Search**: Scrape and analyze the top-performing content creators by niche.
-- **Viral Feed**: Discover the most viral Reels and Shorts instantly.
-- **AI Analytics**: Deep dive into audience demographics, growth scores, and engagement potential using Llama 3 AI.
-- **Fallback Engine**: Bulletproof fallback mechanisms ensure the platform never crashes even if external APIs hit rate limits.
+## Setup and Installation
 
-## Tech Stack
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Snigdha-0210/SocialMedia_AI.git
+   ```
 
-- **Framework**: Next.js (React)
-- **Styling**: Tailwind CSS
-- **AI Integration**: Groq SDK (Llama 3 Models)
-- **Data APIs**: YouTube Data API v3
-- **Database**: Firebase (Firestore)
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-3. Create a `.env.local` file based on `.env.example` and add your API keys.
-4. Run the development server:
+
+3. **Configure Environment Variables:**
+   Create a `.env.local` file in the root directory and add your API keys. Make sure this file is not committed to version control.
+   ```
+   # Add your specific API keys here
+   ```
+
+4. **Run the development server:**
    ```bash
    npm run dev
    ```
 
-## License
+5. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Tech Stack
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Data Visualization:** Recharts
+- **Deployment:** Vercel (recommended)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
